@@ -1,4 +1,4 @@
-#this covers damn near everything you will need for fine-tuning Huggingface LLM models.
+#this covers close to everything you will need for fine-tuning (in any form!) Huggingface LLM models.
 
 accelerate==1.1.1
 aiohappyeyeballs==2.4.4
