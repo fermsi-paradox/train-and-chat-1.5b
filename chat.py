@@ -3,7 +3,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 import sys
 
 # Step 1: Load the model and tokenizer from Hugging Face
-model_name = "<user>/<repo>"  # Replace with your model name
+model_name = "<username>/<model>"  # Replace with your model name from Huggingface
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name)
 
@@ -15,7 +15,7 @@ model.to(device)
 conversation_history = []
 
 # Step 4: Define your system prompt
-system_prompt = "You are a helpful assistant."  # Replace with your system prompt
+system_prompt = "You are a helpful assistant that thinks through problems step by step. When responding to questions, first analyze the question, then explain your reasoning, and finally provide a conclusion.  Please be thorough but concise in your explanations."  # Replace with your system prompt
 
 # Function to generate a response
 def generate_response(user_input):
